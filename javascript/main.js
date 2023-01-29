@@ -1,4 +1,10 @@
-import * as addButton from "./addBook.js";
+import * as bookConstructor from "./bookConstructor.js";
+import * as changeRead from "./changeRead.js";
+import * as removeBook from "./removeBook.js";
 
 
-addButton.addBook();
+
+bookConstructor.bookConstructor();
+changeRead.changeRead();
+removeBook.removeBook();
+

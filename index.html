@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form>
+        <form class="form" onsubmit="event.preventDefault();">
             <div class="field">
                 <label for="ftitle">Title:</label><br>
                 <input type="text" class="ftitle" name="ftitle"><br>
@@ -20,38 +20,39 @@
             </div>
             <div class="field">
                 <label for="fpages">Pages:</label><br>
-                <input type="text" class="fpages" name="fpages"><br>
+                <input type="number" class="fpages" name="fpages"><br>
             </div>
             <div class="field">
                 <label for="fread">Read:</label><br>
-                <input type="checkbox" class="fread" name="fread"><br>
+                <input type="checkbox" class="fread" name="fread" value="read"><br>
             </div>
-            <button class="submit">Submit</button>
+            <button class="submitButton">Submit</button>   
+            <button class="cancelButton">Cancel</button>            
         </form>
     </div>
     <div class="container">
         <h1>My Book Library</h1>
         <div class="bookshelf">
-            <div class="book card">
+            <div class="book card b1">
                 <div class="book-info">
-                    <div class="name">Game of Thrones</div>
+                    <div class="name">A Song of Ice and Fire</div>
                     <div class="author">George R.R. Martin</div>
-                    <div class="pages">700</div>
+                    <div class="pages">4197 pages</div>
                 </div>
                 <div class="book-buttons">
-                    <button class="read"><object data="SVGs/check.svg" width="20" height="20"> </object></button>
-                    <button class="remove"><object data="SVGs/remove.svg" width="20" height="20"> </object></button>
+                    <button class="read changeRead"></button>
+                    <button class="remove r1"></button>
                 </div>
             </div>
-            <div class="book card">
+            <div class="book card b2">
                 <div class="book-info">
-                    <div class="name">Game of Thrones</div>
-                    <div class="author">George R.R. Martin</div>
-                    <div class="pages">700</div>
+                    <div class="name">The Lord of the Rings</div>
+                    <div class="author">J. R. R. Tolkien</div>
+                    <div class="pages">9250 pages</div>
                 </div>
                 <div class="book-buttons">
-                    <button class="read"><object data="SVGs/check.svg" width="20" height="20"> </object></button>
-                    <button class="remove"><object data="SVGs/remove.svg" width="20" height="20"> </object></button>
+                    <button class="unread changeRead"></button>
+                    <button class="remove r2"></button>
                 </div>
             </div>
             <div class="add-book card">
